@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-Use App\HTTP\Controllers\UserController;
+use App\HTTP\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users',[UserController::class,'index']);
+//Route::get('/users',[UserController::class,'index']);
 
-Route::get('/usergo',[UserController::class,'goto']);
+//Route::get('/usergo',[UserController::class,'goto']);
+
+Route::get('Users/{id}',[UserController::class,'show']);
